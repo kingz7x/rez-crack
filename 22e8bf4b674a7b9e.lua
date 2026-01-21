@@ -4849,8 +4849,8 @@ function CheckItemBPCRBPCR(p611)
 end
 
 local u616 = loadstring(game:HttpGet('https://raw.githubusercontent.com/farehamhz/RedzLib/main/RedzLib'))():MakeWindow({
-    Title = 'CLT Hub',
-    SubTitle = 'by kingz7x',
+    Title = 'redz Hub',
+    SubTitle = 'by real_redz',
     SaveFolder = 'Redz | redz lib v5.lua',
 })
 local _ScreenGui = Instance.new('ScreenGui')
@@ -4858,24 +4858,18 @@ local _ScreenGui = Instance.new('ScreenGui')
 _ScreenGui.Name = 'ControlGUI'
 _ScreenGui.Parent = game.CoreGui
 
-local _TextButton = Instance.new("TextButton")
+local _ImageButton = Instance.new('ImageButton')
 
-_TextButton.Size = UDim2.new(0, 35, 0, 35)
-_TextButton.Position = UDim2.new(0.15, 0, 0.15, 0)
+_ImageButton.Size = UDim2.new(0, 35, 0, 35)
+_ImageButton.Position = UDim2.new(0.15, 0, 0.15, 0)
+_ImageButton.Image = 'rbxassetid://73662635170033'
+_ImageButton.BackgroundTransparency = 1
+_ImageButton.Parent = _ScreenGui
 
-_TextButton.Text = "gui"
-_TextButton.TextScaled = true
-_TextButton.Font = Enum.Font.SourceSansBold
-_TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+local _UICorner = Instance.new('UICorner')
 
-_TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-_TextButton.BorderSizePixel = 0
-
-_TextButton.Parent = _ScreenGui
-
-local _UICorner = Instance.new("UICorner")
 _UICorner.CornerRadius = UDim.new(0.25, 0)
-_UICorner.Parent = _TextButton
+_UICorner.Parent = _ImageButton
 
 local u620 = true
 local u621 = nil
@@ -4886,14 +4880,14 @@ local u624 = nil
 local function u627(p625)
     local v626 = p625.Position - u623
 
-    _TextButton.Position = UDim2.new(u624.X.Scale, u624.X.Offset + v626.X, u624.Y.Scale, u624.Y.Offset + v626.Y)
+    _ImageButton.Position = UDim2.new(u624.X.Scale, u624.X.Offset + v626.X, u624.Y.Scale, u624.Y.Offset + v626.Y)
 end
 
-_TextButton.InputBegan:Connect(function(p628)
+_ImageButton.InputBegan:Connect(function(p628)
     if p628.UserInputType == Enum.UserInputType.Touch or p628.UserInputType == Enum.UserInputType.MouseButton1 then
         u621 = true
         u623 = p628.Position
-        u624 = _TextButton.Position
+        u624 = _ImageButton.Position
 
         p628.Changed:Connect(function()
             if p628.UserInputState == Enum.UserInputState.End then
@@ -4902,7 +4896,7 @@ _TextButton.InputBegan:Connect(function(p628)
         end)
     end
 end)
-_TextButton.InputChanged:Connect(function(p629)
+_ImageButton.InputChanged:Connect(function(p629)
     if p629.UserInputType == Enum.UserInputType.Touch or p629.UserInputType == Enum.UserInputType.MouseMovement then
         u622 = p629
     end
@@ -4912,7 +4906,7 @@ game:GetService('UserInputService').InputChanged:Connect(function(p630)
         u627(p630)
     end
 end)
-_TextButton.MouseButton1Click:Connect(function()
+_ImageButton.MouseButton1Click:Connect(function()
     u620 = not u620
 
     if u620 then
