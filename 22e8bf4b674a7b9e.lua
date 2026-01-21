@@ -4886,14 +4886,14 @@ local u624 = nil
 local function u627(p625)
     local v626 = p625.Position - u623
 
-    _ImageButton.Position = UDim2.new(u624.X.Scale, u624.X.Offset + v626.X, u624.Y.Scale, u624.Y.Offset + v626.Y)
+    _TextButton.Position = UDim2.new(u624.X.Scale, u624.X.Offset + v626.X, u624.Y.Scale, u624.Y.Offset + v626.Y)
 end
 
-_ImageButton.InputBegan:Connect(function(p628)
+_TextButton.InputBegan:Connect(function(p628)
     if p628.UserInputType == Enum.UserInputType.Touch or p628.UserInputType == Enum.UserInputType.MouseButton1 then
         u621 = true
         u623 = p628.Position
-        u624 = _ImageButton.Position
+        u624 = _TextButton.Position
 
         p628.Changed:Connect(function()
             if p628.UserInputState == Enum.UserInputState.End then
@@ -4902,7 +4902,7 @@ _ImageButton.InputBegan:Connect(function(p628)
         end)
     end
 end)
-_ImageButton.InputChanged:Connect(function(p629)
+_TextButton.InputChanged:Connect(function(p629)
     if p629.UserInputType == Enum.UserInputType.Touch or p629.UserInputType == Enum.UserInputType.MouseMovement then
         u622 = p629
     end
@@ -4912,7 +4912,7 @@ game:GetService('UserInputService').InputChanged:Connect(function(p630)
         u627(p630)
     end
 end)
-_ImageButton.MouseButton1Click:Connect(function()
+_TextButton.MouseButton1Click:Connect(function()
     u620 = not u620
 
     if u620 then
