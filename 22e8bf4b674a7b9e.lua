@@ -4862,7 +4862,7 @@ local _ImageButton = Instance.new('ImageButton')
 
 _ImageButton.Size = UDim2.new(0, 35, 0, 35)
 _ImageButton.Position = UDim2.new(0.15, 0, 0.15, 0)
-_ImageButton.Image = 'rbxassetid://73662635170033'
+_ImageButton.Image = 'rbxassetid://80424431930361'
 _ImageButton.BackgroundTransparency = 1
 _ImageButton.Parent = _ScreenGui
 
