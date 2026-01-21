@@ -4858,18 +4858,24 @@ local _ScreenGui = Instance.new('ScreenGui')
 _ScreenGui.Name = 'ControlGUI'
 _ScreenGui.Parent = game.CoreGui
 
-local _ImageButton = Instance.new('ImageButton')
+local _TextButton = Instance.new("TextButton")
 
-_ImageButton.Size = UDim2.new(0, 35, 0, 35)
-_ImageButton.Position = UDim2.new(0.15, 0, 0.15, 0)
-_ImageButton.Image = 'rbxassetid://17221918205'
-_ImageButton.BackgroundTransparency = 1
-_ImageButton.Parent = _ScreenGui
+_TextButton.Size = UDim2.new(0, 35, 0, 35)
+_TextButton.Position = UDim2.new(0.15, 0, 0.15, 0)
 
-local _UICorner = Instance.new('UICorner')
+_TextButton.Text = "gui"
+_TextButton.TextScaled = true
+_TextButton.Font = Enum.Font.SourceSansBold
+_TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 
+_TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+_TextButton.BorderSizePixel = 0
+
+_TextButton.Parent = _ScreenGui
+
+local _UICorner = Instance.new("UICorner")
 _UICorner.CornerRadius = UDim.new(0.25, 0)
-_UICorner.Parent = _ImageButton
+_UICorner.Parent = _TextButton
 
 local u620 = true
 local u621 = nil
