@@ -4849,8 +4849,8 @@ function CheckItemBPCRBPCR(p611)
 end
 
 local u616 = loadstring(game:HttpGet('https://raw.githubusercontent.com/farehamhz/RedzLib/main/RedzLib'))():MakeWindow({
-    Title = 'redz Hub',
-    SubTitle = 'by real_redz',
+    Title = 'CLT Hub',
+    SubTitle = 'by kingz7x',
     SaveFolder = 'Redz | redz lib v5.lua',
 })
 local _ScreenGui = Instance.new('ScreenGui')
@@ -4862,7 +4862,7 @@ local _ImageButton = Instance.new('ImageButton')
 
 _ImageButton.Size = UDim2.new(0, 35, 0, 35)
 _ImageButton.Position = UDim2.new(0.15, 0, 0.15, 0)
-_ImageButton.Image = 'rbxassetid://80424431930361'
+_ImageButton.Image = 'rbxassetid://17221918205'
 _ImageButton.BackgroundTransparency = 1
 _ImageButton.Parent = _ScreenGui
 
